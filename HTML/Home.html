@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies</title>
+
+  <style>
+    body{
+      width: 98%;
+      min-height: 90vh;
+      background-color: black;
+      /* display: flex; */
+      /* align-items: center; */
+      /* justify-content: center; */
+
+    }
+    h1{
+      color: #fff;
+      text-align: center;
+    }
+    form{
+      text-align: center; 
+    }
+
+    img{
+      min-width: 100%;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 0 3px 2px rgb(80,80,80);
+      transition: all 0.5s ease;
+    }
+
+    img:hover{
+      transform: scale(1.05);
+    }
+
+    .image-container{
+      width: 90%;
+      display: grid; 
+      grid-template-columns: repeat(auto-fit,minmax(220px,0.4px));
+      margin: 10px auto;
+      place-content: center;
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+  <h1>Movies Search API</h1>
+  <form action="">
+    <input type="text" class="search-input">
+    <button class="search">Search</button>
+  </form>
+
+  <div class="image-container">
+
+  </div>
+
+</main>
+  <script>
+    const forms = document.querySelector('form')
+    const container = document.querySelector('.image-container')
+
+    window.addEventListener("load", (event) => {
+        console.log("page is fully loaded");
+    });
+
+    forms.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      let query = forms.querySelector('input').value;
+      console.log(query);
+
+      tvMazeApi(query);
+    })
+
+     async function tvMazeApi (query){
+      const request = await fetch(` https://api.tvmaze.com/search/shows?q=${query}`)
+      const movies =await request.json();
+    
+
+      makeImages(movies);
+    }
+
+    function makeImages (movies){
+      for(let movie of movies){
+        let src = movie.show.image.medium;
+
+        const img = document.createElement('img');
+
+        img.src=src;
+
+        container.appendChild(img);
+      }
+    }
+  </script>
+</body>
+</html>

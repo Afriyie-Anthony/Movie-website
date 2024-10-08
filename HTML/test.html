@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    fetch('https://api.tvmaze.com/lookup/shows?imdb=tt0944947').then(function(response){
+      return response.json();
+      console.log(response);
+    })
+  </script>
+</body>
+</html>
