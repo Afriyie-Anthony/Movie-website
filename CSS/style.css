@@ -13,7 +13,7 @@ body {
 }
 header{
   background-color: rgb(37,38,49);
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -153,7 +153,7 @@ nav{
     outline: 2px solid rgba(255, 0, 0, .6); */
     box-shadow: 0 0 .5rem #4998FF;
     outline: 2px solid #4998FF;
-    overflow: hidden;
+    /* overflow: hidden; */
     color: #fff;
     cursor: pointer;
     border-radius: .5rem;
@@ -161,7 +161,7 @@ nav{
 .img {
     width: 100%;
     height: 200px;
-    overflow: hidden;
+    /* overflow: hidden; */
     object-fit: contain;
     position: relative;
     transition: 200ms ease-in-out transform;
@@ -187,27 +187,28 @@ nav{
     font-size: 1.3rem;
 }
 .single-info {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
     font-size: .8rem;
     margin: .2rem 0;
 }
-.slider-wrapper{
+/* .slider-wrapper{
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
   padding: 20px;
-}
+} */
 .card:hover .img {
     transform: scale(1.1);
 }
 
 .movies-grid {
-    display: flex;
+   display: flex;
+    /* display: flex;
     align-items: flex-start;
-    justify-content: center;
-    /* flex-wrap: wrap; */
+    justify-content: center; */
+    flex-wrap: wrap;
     gap: 2rem;
     padding: 1rem;
 }
@@ -378,7 +379,7 @@ nav{
 
   .pricing-container{
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
     gap: 50px;
     padding: 1rem 5rem;
@@ -607,7 +608,7 @@ nav{
     #bars{
       display: block;
     }
-    .main{
+     .main{
       
       height: auto;
       padding: 1rem 10px;
@@ -618,16 +619,17 @@ nav{
        padding: 1rem 10px;
 
        .text{
+        text-align: center;
         h1{
           font-size: 2em;
 
           span{
-           font-size: 3em;
+           font-size: 1em;
           }
         }
 
         p{
-          font-size: 2.5em;
+          font-size: 1.5em;
           width: 590px;
         }
       }
@@ -646,7 +648,7 @@ nav{
       }
 
       
-    }
+    } 
     .x-icon {
         top: 10px;
         right: 20px;
@@ -693,10 +695,10 @@ nav{
 }
 
 @media only screen and (max-width: 450px){
-
   header{
     padding-bottom: 30px;
     display: block;
+    width: 100vw;
     /* height: 15vh; */
     
 
@@ -732,5 +734,26 @@ nav{
     float: right;
     margin-top: -4rem;
     padding-right: 2rem;
+  }
+  .pricing-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .main1{
+    .text{
+      h1{
+        font-size: 1em;
+        padding: 0 20rem;
+
+        span{
+          font-size: 10px;
+        }
+      }
+
+      p{
+        font-size: 10px;
+        
+      }
+    }
   }
 }
