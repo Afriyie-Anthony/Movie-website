@@ -300,33 +300,23 @@ async function add_to_dom_series (){
   }).join('')
 }
 
-const close = document.getElementById('close')
-const navItems = document.getElementById('nav-items')
-const SignupButton = document.getElementById('signup')
-const Navigation = document.getElementById('nav')
-const Menu = document.getElementById('bars')
 
-close.addEventListener('click', () => {
-  navItems.style.display = 'none'
-  SignupButton.style.display = 'none'
-  Navigation.style.height = '0'
+const Menu2 = document.getElementById('menu')
+const Close = document.getElementById('close')
+const MenuItems = document.getElementById('nav-items')
 
-  close.style.display = 'none'
+// MenuItems.style.display = 'none'
 
-  Menu.style.display = 'block'
-})
-
-Menu.addEventListener('click', () => {
-  navItems.style.display = 'block'
-  SignupButton.style.display = 'flex'
-  Navigation.style.height = '90vh'
-
-  close.style.display = 'block'
-
-  Menu.style.display = 'none'
+Menu2.addEventListener('click', () =>{
+  MenuItems.style.display = 'flex'
+  Menu2.style.display = 'none'
+  Close.style.display = 'block'
 })
 
 
-// const Slider = document.getElementsByClassName('slider-wrapper')
+Close.addEventListener('click', () =>{
+  MenuItems.style.display = 'none'
+  Menu2.style.display = 'block'
+  Close.style.display = 'none'
+})
 
-// Slider.style.width = `${Slider.children.length * 300}px`;

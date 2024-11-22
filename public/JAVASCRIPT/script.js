@@ -310,24 +310,24 @@ async function add_to_dom_series() {
     .join("");
 }
 
-// Get elements by ID
-const close = document.getElementById("close");
-const navItems = document.getElementById("nav-items");
-const SignupButton = document.getElementById("signup");
-const Navigation = document.getElementById("nav");
-const Menu = document.getElementById("bars");
-
-// Event listener for the 'close' button to hide the navigation menu
-close.addEventListener("click", () => {
-  Navigation.style.display = "none";
-});
-
-// Event listener for the 'bars' button (menu icon) to show the navigation menu
-Menu.addEventListener("click", () => {
-  Navigation.style.display = "block";
-});
 
 
-// const Slider = document.getElementsByClassName('slider-wrapper')
 
-// Slider.style.width = `${Slider.children.length * 300}px`;
+const Menu = document.getElementById('menu')
+const Close = document.getElementById('close')
+const MenuItems = document.getElementById('nav-items')
+
+// MenuItems.style.display = 'none'
+
+Menu.addEventListener('click', () =>{
+  MenuItems.style.display = 'flex'
+  Menu.style.display = 'none'
+  Close.style.display = 'block'
+})
+
+
+Close.addEventListener('click', () =>{
+  MenuItems.style.display = 'none'
+  Menu.style.display = 'block'
+  Close.style.display = 'none'
+})
