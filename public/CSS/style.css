@@ -48,6 +48,7 @@ nav{
 }
 .nav-items ul{
   display: flex;
+  text-align: center;
   gap: 40px;
   align-items: center;
   margin-top: 10px;
@@ -612,82 +613,13 @@ nav{
         margin-top: 50rem;
     }
     #bars{
-      display: block;
+      display: none;
     }
-     .main{
-      
-      height: auto;
-      padding: 1rem 10px;
-
-      .main1{
-        display: flex;
-       flex-direction: column;
-       align-items: center;
-       min-width: 100%;
-       padding: 1rem 10px;
-
-       .text{
-        text-align: center;
-        h1{
-          font-size: 2em;
-
-          span{
-           font-size: 1em;
-          }
-        }
-
-        p{
-          font-size: 1.5em;
-          width: 590px;
-        }
-      }
-
-      .images{
-        width: 100%;
-        height: 60vh;
-        margin: 20px 0;
-       
-        img{
-          height: 59vh;
-        }
-      }
-
-      
-      }
-
-      
-    } 
     .x-icon {
         top: 10px;
         right: 20px;
     }
-    header{
-      padding-bottom: 30px;
-      display: block;
-      /* height: 15vh; */
-      
-  
-      .logo{
-        padding: 0 1.5rem;
-      }
-    }
-    nav{
-      display: block;
-      height: 0;
-  
-      
-      .nav-items{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 60px;
-        display: none;
-       ul{
-        display: block;
-        text-align: center;
-       }
-      }
-  
+    
       .signup{
         display: flex;
         align-items: center;
@@ -700,72 +632,41 @@ nav{
       margin-top: -4rem;
       padding-right: 2rem;
     }
-}
 
 @media only screen and (max-width: 450px){
+ 
   header{
-    padding-bottom: 30px;
     display: block;
-    min-width: 100vw;
-    
-
-    .logo{
-      padding: 0 1.5rem;
-    }
+    padding: 0 10px;
   }
-  nav{
-    display: block;
-    height: 0;
-
-    
-    .nav-items{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      line-height: 60px;
-      display: none;
-     ul{
-      display: block;
-      text-align: center;
-     }
-    }
-
-    .signup{
-      display: none;
-      align-items: center;
-      justify-content: center;
-    }
+  .nav-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
-  .close{
+  .nav-items ul{
     display: none;
-    float: right;
-    margin-top: -4rem;
-    padding-right: 2rem;
+    flex-direction: column;
+   gap: 2rem;
+    align-items: center;
+    padding: 20px 0;
+    text-align: center;
+    li{
+      a{
+        text-align: center;
+      }
+    }
   }
+  #bars{
+    display: block;
+    
+  }
+  
   .pricing-container{
     display: flex;
     flex-direction: column;
   } 
-  .main1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .text{
-      h1{
-        font-size: 1em;
-        padding: 0 20rem;
-
-        span{
-          font-size: 10px;
-        }
-      }
-
-      p{
-        font-size: 10px;
-        
-      }
-    }
-  }
 
   .main-hero{
     display: flex;
